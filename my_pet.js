@@ -22,6 +22,16 @@ const pet = {
         console.log(`Питомец покормлен! Текущий голов: ${this.hunter}`);
     }
 }
+
+function generateHealthReport(pet) {
+    console.log(`Отчет о здоровье ${pet.name}:`);
+    const health = pet.health;
+
+    for (const key in health){
+        console.log(`${key}: ${health[key]}`);
+    }
+}
+
 function playWithPet(petObject) {
     petObject.happinsee += 20;
 }
@@ -30,3 +40,4 @@ pet.feedPet(50);
 playWithPet(pet);
 pet.sayHi();
 pet.sheckStatus();
+generateHealthReport(pet);
