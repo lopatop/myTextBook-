@@ -1,3 +1,4 @@
+
 const pet = {
     name: "Strider",
     happinsee: 50,
@@ -8,18 +9,18 @@ const pet = {
         dental: 100,
         coat: 30
     },
-    sayHi(){
+    sayHi() {
         console.log("Meow!");
     },
-    sheckStatus(){
+    sheckStatus() {
         console.log(`Счастье: ${this.happinsee}, Голод: ${this.hunger}`);
     },
-    feedPet(foodQuantity){
+    feedPet(foodQuantity) {
         this.hunger -= foodQuantity;
-        if (this.hunger < 0){
-            this.hunter = 0; 
+        if (this.hunger < 0) {
+            this.hunter = 0;
         }
-        console.log(`Питомец покормлен! Текущий голов: ${this.hunter}`);
+        console.log(`Питомец покормлен! Текущий голод: ${this.hunger}`);
     }
 }
 
@@ -27,7 +28,7 @@ function generateHealthReport(pet) {
     console.log(`Отчет о здоровье ${pet.name}:`);
     const health = pet.health;
 
-    for (const key in health){
+    for (const key in health) {
         console.log(`${key}: ${health[key]}`);
     }
 }
