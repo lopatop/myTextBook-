@@ -13,9 +13,16 @@ const pet = {
     },
     sheckStatus(){
         console.log(`Счастье: ${this.happinsee}, Голод: ${this.hunger}`);
+    },
+    feedPet(foodQuantity){
+        this.hunger -= foodQuantity;
+        if (this.hunger < 0){
+            this.hunter = 0; 
+        }
+        console.log(`Питомец покормлен! Текущий голов: ${this.hunter}`);
     }
 }
 
-
+pet.feedPet(50);
 pet.sayHi();
 pet.sheckStatus();
