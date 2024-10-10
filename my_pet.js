@@ -22,7 +22,11 @@ const pet = {
         console.log(`Питомец покормлен! Текущий голов: ${this.hunter}`);
     }
 }
+function playWithPet(petObject) {
+    petObject.happinsee += 20;
+}
 
 pet.feedPet(50);
+playWithPet(pet);
 pet.sayHi();
 pet.sheckStatus();
