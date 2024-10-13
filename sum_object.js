@@ -14,8 +14,8 @@ let salaries = {
     Ann: 160,
     Pete: 130,
 }
-let result = 0;
+let sum = 0;
 for (let key in salaries) {
-    result += salaries[key];
+    sum += salaries[key];
 }
-console.log(result);
+console.log(sum);
