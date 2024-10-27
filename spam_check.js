@@ -4,3 +4,7 @@
 // checkSpam('free xxxxx') == true
 // checkSpam("innocent rabbit") == false
 
+const checkSpam = str => {
+    const lowerStr = str.toLowerCase();
+    return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+}
